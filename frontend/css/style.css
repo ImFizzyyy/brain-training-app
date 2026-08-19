@@ -9,11 +9,11 @@ body {
 }
 
 .container {
-    text-align: center;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
     width: 400px;
+    padding: 40px;
+    background: white;
+    border-radius: 24px;
+    text-align: center;
 }
 
 h1 {
@@ -24,6 +24,17 @@ h1 {
 p {
     font-size: 18px;
     color: #666;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 12px;
 }
 
 button {
@@ -44,7 +55,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
 }
