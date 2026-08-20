@@ -31,9 +31,9 @@ localStorage.setItem(
 
 let wordsDiv = document.getElementById("words");
 
-selectedWords.forEach(function (word) {
+selectedWords.forEach(function (word, index) {
     let p = document.createElement("p");
-    p.innerHTML = word;
+    p.innerHTML = (index + 1) + ". " + word;
     wordsDiv.appendChild(p);
 });
 
@@ -45,9 +45,14 @@ function startRecall() {
 
 
 function startTimer() {
+    let startButton = document.getElementById("startButton");
+    startButton.style.display = "none";
+
+    let words = document.getElementById("words");
+    words.style.display = "none";
+
     let timeLeft = 10;
     let timer = document.getElementById("timer");
-    let words = document.getElementById("words");
 
     words.style.display = "none";
     timer.innerHTML = timeLeft;

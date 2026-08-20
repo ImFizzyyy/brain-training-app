@@ -17,6 +17,9 @@ for (let i = 0; i < correctAnswers.length; i++) {
 document.getElementById("score").innerHTML =
     "Your score: " + score + " out of " + correctAnswers.length;
 
+localStorage.removeItem("userAnswers");
+localStorage.removeItem("correctAnswers");
+
 function restartTraining() {
     window.location.href = "memory.html";
 }

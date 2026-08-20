@@ -1,77 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Inter", sans-serif;
     margin: 0;
     min-height: 100vh;
+    padding: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: #f5f7fa;
 }
 
 .container {
-    width: 400px;
-    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+
+    padding: clamp(20px, 5vw, 40px);
+
     background: white;
     border-radius: 24px;
+
     text-align: center;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: clamp(28px, 5vw, 45px);
     color: #1f2937;
 }
 
 p {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.5;
     color: #666;
+}
+
+.word-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#words p {
+    margin: 0;
+    padding: 12px 16px;
+
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 600;
+
+    background-color: #ffffff;
+    border-radius: 12px;
 }
 
 input {
     display: block;
-    width: 80%;
+
+    width: 100%;
+    max-width: 350px;
+
     margin: 15px auto;
+
     padding: 15px;
-    font-size: 18px;
+
+    font-size: clamp(18px, 3vw, 22px);
     font-family: "Inter", sans-serif;
+
     border: 2px solid #ddd;
     border-radius: 12px;
 }
 
 button {
+    width: 100%;
+    max-width: 300px;
+
+    min-height: 55px;
+
     margin-top: 20px;
-    padding: 15px 30px;
+
+    padding: 18px;
+
     border: none;
     border-radius: 12px;
+
     background-color: #7973f0;
+
     color: white;
-    font-size: 18px;
+
+    font-size: 20px;
+
     cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:active {
+    transform: scale(0.97);
 }
 
 .popup {
     display: none;
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-color: rgba(0, 0, 0, 0.4);
+
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
+    width: 90%;
+    max-width: 350px;
+
+    padding: clamp(20px, 5vw, 40px);
+
     background-color: white;
-    padding: 40px;
+
     border-radius: 20px;
+
     text-align: center;
-    width: 350px;
 }
 
 .popup-content h2 {
-    font-size: 24px;
+    font-size: clamp(22px, 4vw, 28px);
 }
 
 .popup-content p {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+@media(max-width:400px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 16px;
+    }
+
+    #words p {
+        padding: 12px;
+    }
 }
