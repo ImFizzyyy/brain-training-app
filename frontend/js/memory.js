@@ -33,7 +33,7 @@ let wordsDiv = document.getElementById("words");
 
 selectedWords.forEach(function (word, index) {
     let p = document.createElement("p");
-    p.innerHTML = (index + 1) + ". " + word;
+    p.innerHTML = word;
     wordsDiv.appendChild(p);
 });
 

@@ -8,9 +8,14 @@ let correctAnswers = JSON.parse(
 
 let score = 0;
 
+let remainingAnswers = [...correctAnswers];
+
 for (let i = 0; i < correctAnswers.length; i++) {
-    if (userAnswers[i] === correctAnswers[i]) {
+    let index = remainingAnswers.indexOf(userAnswers[i]);
+
+    if (index !== -1) {
         score++;
+        remainingAnswers.splice(index, 1);
     }
 }
 
