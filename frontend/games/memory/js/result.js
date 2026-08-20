@@ -26,7 +26,7 @@ localStorage.removeItem("userAnswers");
 localStorage.removeItem("correctAnswers");
 
 let scoreHistory = JSON.parse(
-    localStorage.getItem("scoreHistory")
+    localStorage.getItem("memoryScoreHistory")
 ) || [];
 
 scoreHistory.push({
@@ -40,7 +40,7 @@ if (scoreHistory.length > 100) {
 }
 
 localStorage.setItem(
-    "scoreHistory",
+    "memoryScoreHistory",
     JSON.stringify(scoreHistory)
 );
 

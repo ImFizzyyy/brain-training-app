@@ -1,11 +1,7 @@
 function startTraining() {
-    document.getElementById("popup").style.display = "flex";
+    window.location.href = "choose-game.html";
 }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
-function startMemoryGame() {
-    window.location.href = "countdown.html";
+function goToProgress() {
+    window.location.href = "choose-progress.html";
 }

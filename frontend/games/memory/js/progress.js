@@ -1,5 +1,5 @@
 let scoreHistory = JSON.parse(
-    localStorage.getItem("scoreHistory")
+    localStorage.getItem("memoryScoreHistory")
 ) || [];
 
 let lastFiveScores = scoreHistory.slice(-5);
@@ -85,10 +85,6 @@ if (scoreHistory.length === 0) {
     }
 }
 
-function restartTraining() {
-    window.location.href = "memory.html";
-}
-
 function goHome() {
-    window.location.href = "index.html";
+    window.location.href = "../../../pages/index.html";
 }
