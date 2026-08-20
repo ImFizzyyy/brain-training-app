@@ -20,10 +20,25 @@ document.getElementById("score").innerHTML =
 localStorage.removeItem("userAnswers");
 localStorage.removeItem("correctAnswers");
 
-function restartTraining() {
-    window.location.href = "memory.html";
+let scoreHistory = JSON.parse(
+    localStorage.getItem("scoreHistory")
+) || [];
+
+scoreHistory.push({
+    score: score,
+    total: correctAnswers.length,
+    date: new Date().toLocaleString()
+});
+
+if (scoreHistory.length > 100) {
+    scoreHistory.shift();
 }
 
-function goHome() {
-    window.location.href = "index.html";
+localStorage.setItem(
+    "scoreHistory",
+    JSON.stringify(scoreHistory)
+);
+
+function nextPage() {
+    window.location.href = "progress.html";
 }
